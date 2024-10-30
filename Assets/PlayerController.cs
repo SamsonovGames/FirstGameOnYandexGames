@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
             }
             movement= transform.forward * speed * direction.y;
         }
+        else
+        {
+            transform.eulerAngles += new Vector3(0, angularSpeed * Time.deltaTime * direction.x, 0);
+        }
         rb.linearVelocity = movement;
         //transform.position += new Vector3(x,y,z(0)) x y брать из директион direction.x, direction.y
     }
@@ -33,6 +37,10 @@ public class PlayerController : MonoBehaviour
     {
         direction = context.ReadValue<Vector2>();
     }
+
+
+
+
 
     // Сделать игру в которой будет только куб, котрый двигается по x и y(WASD), без прыжков. КУБ ДОЛЖЕН ЛЕТАТЬ
     //Камера должна стоять ровно сзади (например z = -10), куб на 0 при этом
