@@ -1,0 +1,2 @@
+Build path: E:/Unity/Projects/FirstGameOnYandexGames/Build
+Build number: 1
